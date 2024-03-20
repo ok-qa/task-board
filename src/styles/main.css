@@ -1,18 +1,45 @@
 .kanban * {
   font-family: Raleway;
 }
+body{
+   background-image: url(../images/5160549.jpg);
+   background-size: cover;
+}
 
-.kanban {
+.task-buttons{
+    display: flex;
+    flex-wrap: nowrap;
+    /* align-content: flex-start; */
+    justify-content: space-evenly;
+    align-items: baseline;
+
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 80px;
+    font-weight: 800;
+    color: white;
+  text-transform: uppercase;
+}
+
+.kanban-lanes {
   display: flex;
   padding: 30px;
   border-radius: 10px;
   border: 1px;
   border-color: black;
-  background: #59e3da;
+  
 }
 
 .kanban-column {
   flex: 1;
+  border: 1px;
+  border-radius: 5px;
+  background-color: #f3eeee43; 
 }
 
 .kanban-column:not(:last-child) {
@@ -21,6 +48,11 @@
 
 .column-title {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+
   font-size: 30px;
   font-weight: 800;
   color: white;
@@ -35,24 +67,15 @@
   cursor: pointer;
 }
 
-/* .kanban-dropzone {
-    height: 1-px;
-    transition: background 0.15s height 0.15s;
-} */
-
-/* .kanban-dropzone-active {
-height: 20px;
-background: rgba(0, 0, 0, 0.25);
-} */
-
 .createItemBtn {
   margin-top: 20px;
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: rgb(33, 125, 125);
+  color: rgb(16, 82, 214);
   background-color: rgba(0, 0, 0, 0.1);
-  border: none;
+  border: 1px;
+  border-color: #000;
   border-radius: 5px;
 }
 
@@ -60,7 +83,7 @@ background: rgba(0, 0, 0, 0.25);
 .createItemBtn:focus {
   cursor: pointer;
   color: white;
-  background-color: rgb(33, 125, 125);
+  background-color: rgba(16, 82, 214, 0.621);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 100ms;
@@ -117,7 +140,7 @@ background: rgba(0, 0, 0, 0.25);
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 
-  color: rgb(33, 125, 125);
+  color: rgba(16, 82, 214, 0.621);
 }
 
 .label {
@@ -236,6 +259,9 @@ input {
 .task-name {
   text-transform: capitalize;
   font-weight: 800;
+      display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .task-description {
